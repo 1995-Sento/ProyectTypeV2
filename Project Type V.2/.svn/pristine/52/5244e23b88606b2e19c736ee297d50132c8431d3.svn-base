@@ -1,0 +1,21 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class spamear : MonoBehaviour {
+
+    public GameObject F_Delta;
+    public RectTransform _initPos;
+    public Transform _Enemiparent;
+    GameObject F_DeltaClone;
+    [Header("Escala Enemigos")]
+    public Vector3 escala;
+
+	public void Lanzar()
+    {
+        F_DeltaClone = Instantiate(F_Delta, transform.position, Quaternion.identity) as GameObject;
+        F_DeltaClone.transform.SetParent(_Enemiparent, true);
+        //F_DeltaClone.transform.SetParent(GameObject.Find("EnemieSpawn").gameObject.transform, false);
+        F_DeltaClone.transform.localScale = escala;
+    }
+}
+

@@ -1,0 +1,45 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class Util : MonoBehaviour {
+    public GameObject _nave1;
+    public GameObject _nave2;
+
+    public void reset() {
+        if (SceneManager.GetSceneByName("p1").Equals("p1"))
+        {
+            Application.LoadLevel("p1");
+
+        }
+        else
+        {
+            Application.LoadLevel("p1R");
+
+
+        }
+        if (SceneManager.GetSceneByName("p1R").Equals("p1R"))
+        {
+            Application.LoadLevel("p1R");
+
+        }
+        else
+        {
+            Application.LoadLevel("p1");
+
+        }
+    }
+
+        public void Seleccion1()
+    {
+        Application.LoadLevel("p1");
+
+    }
+    public void Seleccion2()
+    {
+        Application.LoadLevel("p1R");
+
+    }
+}
+
+
